@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.lunaticCoders.shri99.iSpecs.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="640dip"
+        android:layout_height="480dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/results"
+        android:background="@color/control_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@string/help_message"
+            tools:text="dog: 0.343535" />
+
+        <TextView
+            android:id="@+id/result2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="chair: 0.23423423" />
+
+        <TextView
+            android:id="@+id/result3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="cat: 0.21423423" />
+
+        <Button
+            android:id="@+id/ass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Query" />
+
+        <Button
+            android:id="@+id/ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="test"
+            android:text="New Object" />
+    </LinearLayout>
+
+</RelativeLayout>

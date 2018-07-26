@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Android Things TensorFlow Image Classifier</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="help_message">When the LED is on, press the button to capture an image</string>
+    <string name="button_new_request">New Request</string>
+    <string name="button_retry">Retry</string>
+    <string name="button_listening">Listening</string>
+</resources>

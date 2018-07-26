@@ -1,0 +1,69 @@
+// This file provides basic support for building the TensorFlow demo
+// in Android Studio with Gradle.
+
+apply plugin: 'com.android.application'
+apply plugin: 'de.undercouch.download'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        applicationId = 'com.example.androidthings.imageclassifier'
+        minSdkVersion 27
+        targetSdkVersion 27
+    }
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['./assets']
+        }
+    }
+}
+
+// Download model zip file into ../../assets directory
+// unzip it to demo project's own ./assets directory
+import de.undercouch.gradle.tasks.download.Download
+task downloadFile(type: Download) {
+    src 'https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip'
+    dest projectDir.toString() + '/../../assets/inception.zip'
+}
+task unzip(type: Copy) {
+    from zipTree(projectDir.toString() + '/../../assets/inception.zip')
+    into file(projectDir.toString() + '/assets')
+}
+unzip.dependsOn downloadFile
+
+project.afterEvaluate {
+    if (!(new File(projectDir.toString() + '/assets')).exists()) {
+        preBuild.dependsOn unzip
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation project(':grpc')
+    compileOnly 'com.google.android.things:androidthings:1.0'
+
+    implementation('com.google.auth:google-auth-library-oauth2-http:0.6.0') {
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+
+    implementation 'com.google.android.things.contrib:driver-voicehat:1.0'
+    implementation 'com.google.android.things.contrib:driver-button:1.0'
+    implementation 'org.tensorflow:tensorflow-android:1.9.0'
+}
