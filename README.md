@@ -1,6 +1,10 @@
 # iSpecs: For the Blind:-
 ## A pair of smart glasses for the blind. Powered by Android Things and Tensor Flow also integrated with Google Assistant.
-![img](https://image.ibb.co/eqrdRU/Page_1_Image_1.jpg)
+
+<p align="center">
+ <img src="https://image.ibb.co/eqrdRU/Page_1_Image_1.jpg" />
+</p>
+
 ## Team:-        			   Lunatic Coders
 
 ## Members:- 
@@ -27,7 +31,10 @@
 * Resin.io
 * Google Assistant SDK
 
-![tff](https://preview.ibb.co/ibymD9/Page_3_Image_2.jpg)
+<p align="center">
+ <img src="https://preview.ibb.co/ibymD9/Page_3_Image_2.jpg" />
+</p>
+
 ## PROBLEM:-
 Ever thought how is the life of a blind person, their life is full of risk. They can't even walk alone through a busy street or through a park. They shall need some assistance from others. They are also curious about the beauty of the world. Even though they can find their own things without anyone's need. So, How we solve this?
 
@@ -41,8 +48,10 @@ User can able to talk to google assistant for any assistance also he or she can 
 iSpecs does have three main parts, a raspberry pi 3 (powered by android things), camera and a button. When the person press the button on the iSpecs, The iSpecs will take a picture and analyze the image using tensor flow and detect what is that picture is about, then using a speaker or headphone, the iSpecs will voice assist the person about that picture.
 This is how iSpecs works.
 
+<p align="center">
+ <img src="https://preview.ibb.co/dq2Gfp/Page_4_Image_3.jpg" />
+</p>
 
- ![](https://preview.ibb.co/dq2Gfp/Page_4_Image_3.jpg)
 ## Concept Design:-
   Many visually impaired peoples out there, expecting some kind of thing that can help them to be self-reliable themselves.
   So, we would like to bring this concept into reality. We designed a couple of concept design in a 3D modeling CAD tool.
